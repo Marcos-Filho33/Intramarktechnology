@@ -19,8 +19,7 @@ export default function PomodoroTimer() {
     timeLeft, currentPhase, cycleCount, settings,
   } = useTimer()
   const prevPhaseRef = useRef(currentPhase)
-
-  useEffect(() => { prevPhaseRef.current = currentPhase }, [currentPhase])
+  const completedRef = useRef(false)
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'default') {
@@ -51,10 +50,15 @@ export default function PomodoroTimer() {
   }, [activeTaskId, activeTask, updateTask, settings.focusDuration])
 
   useEffect(() => {
-    if (timerState === 'idle' && timeLeft === 0 && prevPhaseRef.current === 'focus') {
+    if (timerState === 'idle' && timeLeft === 0 && prevPhaseRef.current === 'focus' && !completedRef.current) {
+      completedRef.current = true
       handleComplete()
     }
-  }, [timerState, timeLeft, handleComplete])
+    prevPhaseRef.current = currentPhase
+    if (timerState !== 'idle' || timeLeft > 0) {
+      completedRef.current = false
+    }
+  }, [timerState, timeLeft, currentPhase, handleComplete])
 
   const totalCycles = settings.cyclesBeforeLongBreak
   const cycleDisplay = currentPhase === 'focus' ? cycleCount + 1 : cycleCount
