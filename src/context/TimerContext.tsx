@@ -1,6 +1,6 @@
 'use client'
 import { createContext, useContext, useState, useEffect, useCallback, useRef, ReactNode } from 'react'
-import { TimerSettings, DEFAULT_TIMER_SETTINGS, Task } from '@/types'
+import { TimerSettings, DEFAULT_TIMER_SETTINGS } from '@/types'
 import { loadFromStorage, saveToStorage } from '@/utils/storage'
 
 const SETTINGS_KEY = 'time-manager-settings'
@@ -56,6 +56,7 @@ export function TimerProvider({ children }: { children: ReactNode }) {
   }, [settings])
 
   const startTimer = useCallback(() => {
+    clearTimer()
     const dur = getDuration(currentPhase)
     setTimeLeft(dur)
     setTimerState('running')
