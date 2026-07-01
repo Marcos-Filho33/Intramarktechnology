@@ -22,10 +22,19 @@ export default function PomodoroTimer() {
 
   useEffect(() => { prevPhaseRef.current = currentPhase }, [currentPhase])
 
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission()
+    }
+  }, [])
+
   const activeTask = tasks.find(t => t.id === activeTaskId)
 
   const handleComplete = useCallback(() => {
     if (!activeTaskId) return
+    if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'granted') {
+      new Notification('Pomodoro concluído!', { body: 'Hora de fazer uma pausa.' })
+    }
     updateTask(activeTaskId, {
       completedPomodoros: (activeTask?.completedPomodoros ?? 0) + 1,
       pomodoroSessions: [
@@ -75,7 +84,7 @@ export default function PomodoroTimer() {
       </div>
 
       <p className="text-sm text-gray-500">
-        Ciclo {cycleDisplay}/{currentPhase === 'longBreak' ? totalCycles : totalCycles}
+        Ciclo {cycleDisplay}/{totalCycles}
       </p>
 
       <div className="flex gap-3">

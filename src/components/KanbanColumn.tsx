@@ -9,12 +9,6 @@ interface Props {
   tasks: Task[]
 }
 
-const statusLabels: Record<Task['status'], string> = {
-  todo: 'A Fazer',
-  doing: 'Fazendo',
-  done: 'Concluído',
-}
-
 export default function KanbanColumn({ title, status, tasks }: Props) {
   return (
     <div className="bg-gray-200 rounded-lg p-3 w-72 flex-shrink-0">
