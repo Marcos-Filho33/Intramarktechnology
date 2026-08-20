@@ -254,7 +254,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">Catálogo inteligente de serviços</h2>
               <p className="mt-3 max-w-2xl text-white/70">
-                Selecione o que você precisa e o formulário vai montar uma mensagem pronta para o WhatsApp da IntraMark.
+                Selecione o que você precisa e o formulário vai montar uma mensagem pronta para o WhatsApp da IntraMark Technology.
               </p>
             </div>
           </div>
@@ -387,10 +387,10 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           className="rounded-[2rem] border border-white/10 bg-white/[0.02] px-5 py-8 sm:px-8"
         >
-          <p className="text-sm uppercase tracking-[0.4em] text-red-300">Sobre a IntraMark</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-red-300">Sobre a IntraMark Technology</p>
           <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">Tecnologia com foco em resultado real</h2>
           <p className="mt-4 max-w-3xl text-white/75">
-            A IntraMark transforma operações complexas em experiências digitais confortáveis, rápidas e visualmente premium. Entregamos softwares, integrações e experiências digitais que conectam estratégia, automação e crescimento.
+            A IntraMark Technology transforma operações complexas em experiências digitais confortáveis, rápidas e visualmente premium. Entregamos softwares, integrações e experiências digitais que conectam estratégia, automação e crescimento.
           </p>
         </motion.div>
       </section>
@@ -399,7 +399,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
             <IntraMarkLogo className="mb-2" />
-            <p className="text-sm text-white/65">© 2026 IntraMark Tecnolig. Todos os direitos reservados.</p>
+            <p className="text-sm text-white/65">© 2026 IntraMark Technology. Todos os direitos reservados.</p>
           </div>
           <div className="flex flex-wrap gap-4 text-sm text-white/70">
             <a href={`https://wa.me/${whatsappNumber}`} className="transition hover:text-white">WhatsApp</a>
