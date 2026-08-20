@@ -15,7 +15,7 @@ export function IntraMarkLogo({ className = "" }: { className?: string }) {
       <div className="leading-tight">
         <p className="text-sm font-semibold tracking-[0.35em] text-white/90">INTRAMARK</p>
         <p className="text-[11px] uppercase tracking-[0.35em] text-red-400/90">
-          Tecnolig
+          Technology
         </p>
       </div>
     </div>
