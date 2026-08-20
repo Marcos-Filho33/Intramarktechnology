@@ -115,7 +115,7 @@ export default function Home() {
       return;
     }
 
-    const message = `Olá, IntraMark! 👋\n\nTenho interesse nos seguintes serviços:\n\n${selectedLabels.join("\n")}\n\n👤 Nome: ${formData.name}\n🏢 Empresa: ${formData.company}\n📱 WhatsApp: ${formData.whatsapp}\n\n📝 Projeto:\n${formData.description}\n\nGostaria de conversar sobre o projeto.`;
+    const message = `Olá, IntraMark Technology! 👋\n\nTenho interesse nos seguintes serviços:\n\n${selectedLabels.join("\n")}\n\n👤 Nome: ${formData.name}\n🏢 Empresa: ${formData.company}\n📱 WhatsApp: ${formData.whatsapp}\n\n📝 Projeto:\n${formData.description}\n\nGostaria de conversar sobre o projeto.`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
