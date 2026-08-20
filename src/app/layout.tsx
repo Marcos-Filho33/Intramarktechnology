@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "IntraMark Technology | Catálogo inteligente de serviços",
   description:
-    "Site moderno e responsivo da IntraMark Tecnolig com catálogo inteligente de serviços e envio automático para WhatsApp.",
+    "Site moderno e responsivo da IntraMark Technology com catálogo inteligente de serviços e envio automático para WhatsApp.",
   keywords: [
     "IntraMark",
     "tecnologia",
